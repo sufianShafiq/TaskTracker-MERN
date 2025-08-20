@@ -1,72 +1,108 @@
 # TaskTracker – A MERN Stack Project
 
-**TaskTracker** is a full‑stack web application for creating and managing tasks. Built with MongoDB, Express, React, and Node.js (the MERN stack), it demonstrates how to stitch together a backend API with a responsive frontend interface.
+**TaskTracker** is a full-stack web application for creating and managing tasks.  
+It is built with **MongoDB, Express, React, and Node.js (MERN stack)** and demonstrates how to connect a backend API with a responsive frontend.
 
-This repository is organised into two directories:
+---
 
-- **`server`** – Contains the Express/Mongoose backend for CRUD operations on tasks.
-- **`client`** – Contains the React frontend for interacting with the API.
+## 🚀 Features
+- Add, edit, and delete tasks  
+- View task list in real-time  
+- RESTful API with Express and MongoDB  
+- React frontend with reusable components  
+- Environment-based configuration  
 
-The project is intentionally named and structured to go beyond a trivial “sample app.” It includes clear separation of concerns, documentation and environment configuration to help you get started quickly.
+---
 
-## Getting Started
+## 📂 Project Structure
+```
+task-tracker/
+│── client/       # React frontend
+│   ├── src/
+│   │   ├── components/   # TaskForm, TaskList
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+│
+│── server/       # Node.js + Express backend
+│   ├── routes/   # Task routes
+│   ├── models/   # Mongoose models
+│   ├── index.js  # App entry
+│   └── package.json
+│
+└── README.md
+```
 
-Below are the high‑level steps to run TaskTracker locally. For detailed setup instructions for each part, refer to the `README.md` files in the respective directories.
+---
 
-### Prerequisites
+## ⚙️ Installation & Setup
 
-- [Node.js](https://nodejs.org/) (version 14 or higher recommended)
-- [MongoDB](https://www.mongodb.com/) installed and running locally, or a MongoDB connection string from a hosting provider (e.g., Atlas)
-
-### Clone and Prepare
-
+### 1️⃣ Clone the repository
 ```bash
-# Clone the repository (if you haven't already)
-git clone <repo-url>
+git clone https://github.com/sufianShafiq/task-tracker.git
 cd task-tracker
-
-# Install backend dependencies
-cd server
-npm install
-cp .env.example .env  # adjust variables as needed
-
-# Install frontend dependencies
-cd ../client
-npm install
 ```
 
-### Running the Application
+### 2️⃣ Install dependencies
 
-Start the MongoDB server if it isn’t already running. Then, in separate terminal windows/tabs, run the backend and frontend:
-
+#### Backend (server)
 ```bash
-# Start the backend server
 cd server
-npm start
+npm install
+```
 
-# Start the frontend
+#### Frontend (client)
+```bash
 cd ../client
+npm install
+```
+
+### 3️⃣ Configure environment
+Create a `.env` file in `/server` (you can copy from `.env.example`):
+```env
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/tasktracker
+PORT=5000
+```
+
+### 4️⃣ Run the project
+
+#### Start backend
+```bash
+cd server
 npm start
 ```
 
-The backend will listen on `http://localhost:5000` by default, and the frontend will run on `http://localhost:3000`. The React app proxies API requests to the backend; when you add, update or delete tasks from the web interface, the Express server will handle the requests and persist data to MongoDB.
+#### Start frontend
+```bash
+cd client
+npm start
+```
 
-## Project Highlights
+### 5️⃣ Access the app
+Open in browser:  
+👉 `http://localhost:3000`
 
-- **Proper naming:** Unlike boilerplate “example” projects, this app has been given a meaningful name (TaskTracker) and a basic feature set you can extend.
-- **RESTful API:** The backend exposes endpoints for creating, reading, updating and deleting tasks. See `server/README.md` for details.
-- **React hooks:** The frontend uses modern React features like hooks (`useState`, `useEffect`) for state management.
-- **Stateful UI:** Tasks are fetched from the API and displayed in a responsive list; you can add new tasks, mark them complete or delete them.
-- **Configuration:** Example `.env` files show how to customise your MongoDB connection string and other variables.
-- **Documentation:** Each part of the stack includes a `README.md` to guide you through installation and usage.
+---
 
-## Next Steps
+## 🛠️ Tech Stack
+- **Frontend**: React, Axios, CSS  
+- **Backend**: Node.js, Express.js, Mongoose  
+- **Database**: MongoDB (Atlas or Local)  
 
-TaskTracker provides a foundation you can build upon. Here are some ideas for extending it:
+---
 
-- Add authentication so each user has their own tasks.
-- Add due dates or priorities to tasks and visualise them with different colours or lists.
-- Write tests for the API and React components.
-- Deploy the app to a cloud provider (e.g., Heroku for the backend and Vercel for the frontend).
+## 📌 Scripts
+From the root folders:
 
-Feel free to customise and extend the app to suit your needs!
+**Client**:
+- `npm start` – Run React app  
+- `npm run build` – Build for production  
+
+**Server**:
+- `npm start` – Start backend  
+- `npm run dev` – Start backend with nodemon  
+
+---
+
+## 📖 License
+This project is open-source and available under the MIT License.  

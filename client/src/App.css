@@ -1,0 +1,125 @@
+/* Basic styles for TaskTracker */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.task-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.task-form h2 {
+  margin-top: 0;
+}
+
+.task-form .form-group {
+  margin-bottom: 15px;
+}
+
+.task-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.task-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #007bff;
+}
+
+.task-list li.completed {
+  border-left-color: #28a745;
+  opacity: 0.8;
+}
+
+.task-info h3 {
+  margin: 0 0 5px 0;
+}
+
+.task-info p {
+  margin: 0 0 5px 0;
+}
+
+.task-actions button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-actions button:hover {
+  opacity: 0.9;
+}
+
+.task-actions button.danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.task-actions button:not(.danger) {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.error {
+  color: #dc3545;
+}
